@@ -6,13 +6,14 @@ import AsideSponsors from './components/AsideSponsors.vue'
 import TranslationStatus from './components/TranslationStatus.vue'
 import './styles/vars.css'
 import './styles/sponsors.css'
+import Layout from './components/Layout.vue'
 import VueSchoolLink from './components/VueSchoolLink.vue'
 import VueMasteryLogoLink from './components/VueMasteryLogoLink.vue'
 
 const theme: Theme = {
   ...DefaultTheme,
   Layout() {
-    return h(DefaultTheme.Layout, null, {
+    return h(Layout, null, {
       // 'home-features-after': () => h(HomeSponsors),
       'aside-ads-before': () => h(AsideSponsors),
       'doc-before': () => h(TranslationStatus),
